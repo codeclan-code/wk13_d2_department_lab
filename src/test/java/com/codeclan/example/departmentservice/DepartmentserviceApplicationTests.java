@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class DepartmentserviceApplicationTests {
+public class DepartmentserviceApplicationTests {
 
 	@Autowired
 	EmployeeRepository employeeRepository;
@@ -26,7 +26,7 @@ class DepartmentserviceApplicationTests {
 	ProjectRepository projectRepository;
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 	@Test
@@ -51,7 +51,6 @@ class DepartmentserviceApplicationTests {
 
 		project.addEmployee(employee1);
 		projectRepository.save(project);
-
 
 	}
 
