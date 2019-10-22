@@ -1,7 +1,8 @@
 package com.codeclan.example.departmentservice.controllers;
 
-import com.codeclan.example.departmentservice.models.Department;
-import com.codeclan.example.departmentservice.repositories.DepartmentRepository;
+
+import com.codeclan.example.departmentservice.models.Project;
+import com.codeclan.example.departmentservice.repositories.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,15 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/departments")
-public class DepartmentController {
+@RequestMapping(value = "/projects")
+
+public class ProjectController {
     @Autowired
-    DepartmentRepository departmentRepository;
+    ProjectRepository projectRepository;
 
     @GetMapping
-    public List<Department> getAllDepartments(){
-        return departmentRepository.findAll();
+    public List<Project> getAllProjects(){
+        return projectRepository.findAll();
     }
-
-
 }
