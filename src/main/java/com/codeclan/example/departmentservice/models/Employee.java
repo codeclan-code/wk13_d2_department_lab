@@ -100,4 +100,8 @@ public class Employee {
     public void setProjects(List<Project> projects) {
         this.projects = projects;
     }
+
+    public void addProject(Project project){
+        this.projects.add(project);
+    }
 }
